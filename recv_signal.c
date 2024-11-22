@@ -29,7 +29,6 @@ void handle_signal(int sig, siginfo_t *info, void *context) {
 
 int main() {
     struct sigaction sa;
-
     sa.sa_flags = SA_SIGINFO; //enable detailed signal information
     sa.sa_sigaction = handle_signal;
     sigemptyset(&sa.sa_mask);
